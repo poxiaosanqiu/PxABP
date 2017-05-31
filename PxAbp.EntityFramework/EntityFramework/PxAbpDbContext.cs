@@ -3,6 +3,8 @@ using Abp.Zero.EntityFramework;
 using PxAbp.Authorization.Roles;
 using PxAbp.MultiTenancy;
 using PxAbp.Users;
+using System.Data.Entity;
+using PxAbp.Tasks;
 
 namespace PxAbp.EntityFramework
 {
@@ -43,5 +45,7 @@ namespace PxAbp.EntityFramework
         {
 
         }
+
+        public IDbSet<Task> Tasks { get; set; }
     }
 }
